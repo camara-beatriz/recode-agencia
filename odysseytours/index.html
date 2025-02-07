@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odyssey Tours</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="logo.svg">
+    <link rel="icon" type="image/png" href="./img/logo.svg">
     <style>
         :root {
             --primary-color: #0D3B66; /* Azul Profundo */
@@ -23,12 +23,28 @@
             background-color: var(--primary-color) !important;
         }
 
-        .navbar-brand, .nav-link {
+        .navbar-brand {
+            display: flex;
+            align-items: center;
             color: var(--secondary-color) !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-brand img {
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand span {
+                display: none;
+            }
         }
 
         .hero {
-            background: url('banner.png') center/cover no-repeat;
+            background: url('./img/banner.png') center/cover no-repeat;
             height: 60vh;
             display: flex;
             align-items: center;
@@ -62,6 +78,16 @@
             border-color: var(--secondary-color);
         }
 
+        .row.g-3 > * {
+            padding-bottom: 15px;
+        }
+
+        .social-icons a {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
         footer {
             background-color: var(--primary-color);
             color: var(--background-color);
@@ -72,7 +98,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="logo.svg" alt="Odyssey Tours Logo" width="50" height="50">
+                <img src="./img/logo.svg" alt="Odyssey Tours Logo">
+                <span>Odyssey Tours</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -83,6 +110,8 @@
                     <li class="nav-item"><a class="nav-link" href="#">Destinos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Pacotes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-secondary text-white ms-2" href="#">Cadastro</a></li>
                 </ul>
             </div>
         </div>
@@ -101,6 +130,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Paris</h5>
                         <p class="card-text">Conheça a cidade do amor e suas incríveis atrações!</p>
+                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
@@ -110,6 +140,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Nova York</h5>
                         <p class="card-text">A cidade que nunca dorme te espera para uma aventura inesquecível!</p>
+                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
@@ -119,9 +150,47 @@
                     <div class="card-body">
                         <h5 class="card-title">Rio de Janeiro</h5>
                         <p class="card-text">Aproveite praias deslumbrantes e paisagens inesquecíveis.</p>
+                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Pacotes de Turismo</h2>
+        <p class="text-center">Escolha entre nossos pacotes exclusivos para sua próxima aventura.</p>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pacote Europa Clássica</h5>
+                        <p class="card-text">Descubra as maravilhas da Europa em um roteiro inesquecível.</p>
+                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pacote Caribe Paradisíaco</h5>
+                        <p class="card-text">Aproveite praias deslumbrantes e resorts luxuosos no Caribe.</p>
+                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 text-center">
+        <h2 class="mb-4">Entre em Contato</h2>
+        <p>Acompanhe nossas redes sociais e fique por dentro das novidades!</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
     </section>
 
