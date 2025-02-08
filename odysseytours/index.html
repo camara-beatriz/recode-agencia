@@ -9,8 +9,9 @@
     <style>
         :root {
             --primary-color: #0D3B66; /* Azul Profundo */
-            --secondary-color: #F4A261; /* Dourado */
-            --background-color: #E9E9E9; /* Branco Pérola */
+            --secondary-color: #F4A261; /* Dourado */      
+            --background-color: #F4A261;    
+           /* --background-color: #E9E9E9; /* Branco Pérola */
             --text-color: #333333; /* Cinza Escuro */
         }
 
@@ -45,7 +46,7 @@
 
         .hero {
             background: url('./img/banner.png') center/cover no-repeat;
-            height: 60vh;
+            height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -56,8 +57,29 @@
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
+        .pacotes {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            padding: 50px 0;
+        }
+
         .card {
             border-color: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card-title {
@@ -95,7 +117,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./img/logo.svg" alt="Odyssey Tours Logo">
@@ -107,9 +129,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Destinos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Pacotes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pacotes">Pacotes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-secondary text-white ms-2" href="#">Cadastro</a></li>
                 </ul>
@@ -121,50 +143,53 @@
         <div>Explore o mundo com a Odyssey Tours!</div>
     </header>
 
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Destinos Populares</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?paris" class="card-img-top" alt="Paris">
-                    <div class="card-body">
-                        <h5 class="card-title">Paris</h5>
-                        <p class="card-text">Conheça a cidade do amor e suas incríveis atrações!</p>
-                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
+    <div id="destinos">
+        <section class="container my-5" >
+            <h2 class="text-center mb-4">Destinos Populares</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/paris.jpg" class="card-img-top" alt="Paris">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Paris</h5>
+                            <p class="card-text">Conheça a cidade do amor e suas incríveis atrações!</p>
+                            <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/newyork.jpg" class="card-img-top" alt="Nova York">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nova York</h5>
+                            <p class="card-text">A cidade que nunca dorme te espera para uma aventura inesquecível!</p>
+                            <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./img/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rio de Janeiro</h5>
+                            <p class="card-text">Aproveite praias deslumbrantes e paisagens inesquecíveis.</p>
+                            <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?newyork" class="card-img-top" alt="Nova York">
-                    <div class="card-body">
-                        <h5 class="card-title">Nova York</h5>
-                        <p class="card-text">A cidade que nunca dorme te espera para uma aventura inesquecível!</p>
-                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://source.unsplash.com/400x300/?rio" class="card-img-top" alt="Rio de Janeiro">
-                    <div class="card-body">
-                        <h5 class="card-title">Rio de Janeiro</h5>
-                        <p class="card-text">Aproveite praias deslumbrantes e paisagens inesquecíveis.</p>
-                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-
-    <section class="container my-5">
+    <div class="pacotes" id="pacotes">
+        <section class="container my-5">
         <h2 class="text-center mb-4">Pacotes de Turismo</h2>
         <p class="text-center">Escolha entre nossos pacotes exclusivos para sua próxima aventura.</p>
         <div class="row g-3">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-body">
+                    <img src="./img/europe.jpg" class="card-img-top" alt="Europa">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Pacote Europa Clássica</h5>
                         <p class="card-text">Descubra as maravilhas da Europa em um roteiro inesquecível.</p>
                         <a href="#" class="btn btn-primary">Ver Detalhes</a>
@@ -173,7 +198,8 @@
             </div>
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-body">
+                    <img src="./img/caribe.jpg" class="card-img-top" alt="Caribe">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Pacote Caribe Paradisíaco</h5>
                         <p class="card-text">Aproveite praias deslumbrantes e resorts luxuosos no Caribe.</p>
                         <a href="#" class="btn btn-primary">Ver Detalhes</a>
@@ -181,9 +207,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </div>
 
-    <section class="container my-5 text-center">
+    <section class="container-fluid my-5 text-center" id="contato">
         <h2 class="mb-4">Entre em Contato</h2>
         <p>Acompanhe nossas redes sociais e fique por dentro das novidades!</p>
         <div class="social-icons">
