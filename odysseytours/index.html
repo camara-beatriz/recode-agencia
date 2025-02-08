@@ -5,117 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odyssey Tours</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" type="image/png" href="./img/logo.svg">
-    <style>
-        :root {
-            --primary-color: #0D3B66; /* Azul Profundo */
-            --secondary-color: #F4A261; /* Dourado */      
-            --background-color: #F4A261;    
-           /* --background-color: #E9E9E9; /* Branco Pérola */
-            --text-color: #333333; /* Cinza Escuro */
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        .navbar {
-            background-color: var(--primary-color) !important;
-        }
-
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            color: var(--secondary-color) !important;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .navbar-brand img {
-            margin-right: 10px;
-            width: 50px;
-            height: 50px;
-        }
-
-        @media (max-width: 768px) {
-            .navbar-brand span {
-                display: none;
-            }
-        }
-
-        .hero {
-            background: url('./img/banner.png') center/cover no-repeat;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--secondary-color);
-            text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
-
-        .pacotes {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            padding: 50px 0;
-        }
-
-        .card {
-            border-color: var(--primary-color);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .card img {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card-title {
-            color: var(--primary-color);
-        }
-
-        .card-text {
-            color: var(--text-color);
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-
-        .row.g-3 > * {
-            padding-bottom: 15px;
-        }
-
-        .social-icons a {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-            margin: 0 10px;
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-        }
-    </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -140,46 +34,46 @@
     </nav>
 
     <header class="hero">
-        <div>Explore o mundo com a Odyssey Tours!</div>
+        <h1><mark>Explore o mundo com a Odyssey Tours!</mark></h1>
     </header>
 
-    <div id="destinos">
-        <section class="container my-5" >
-            <h2 class="text-center mb-4">Destinos Populares</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="./img/paris.jpg" class="card-img-top" alt="Paris">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Paris</h5>
-                            <p class="card-text">Conheça a cidade do amor e suas incríveis atrações!</p>
-                            <a href="#" class="btn btn-primary">Ver Detalhes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="./img/newyork.jpg" class="card-img-top" alt="Nova York">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Nova York</h5>
-                            <p class="card-text">A cidade que nunca dorme te espera para uma aventura inesquecível!</p>
-                            <a href="#" class="btn btn-primary">Ver Detalhes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="./img/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Rio de Janeiro</h5>
-                            <p class="card-text">Aproveite praias deslumbrantes e paisagens inesquecíveis.</p>
-                            <a href="#" class="btn btn-primary">Ver Detalhes</a>
-                        </div>
+    
+    <section class="container my-5" >
+        <h2 class="text-center mb-4">Destinos Populares</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/paris.jpg" class="card-img-top" alt="Paris">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="card-text">Conheça a cidade do amor e suas incríveis atrações!</p>
+                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/newyork.jpg" class="card-img-top" alt="Nova York">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Nova York</h5>
+                        <p class="card-text">A cidade que nunca dorme te espera para uma aventura inesquecível!</p>
+                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./img/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Rio de Janeiro</h5>
+                        <p class="card-text">Aproveite praias deslumbrantes e paisagens inesquecíveis.</p>
+                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
     <div class="pacotes" id="pacotes">
         <section class="container my-5">
@@ -214,10 +108,10 @@
         <h2 class="mb-4">Entre em Contato</h2>
         <p>Acompanhe nossas redes sociais e fique por dentro das novidades!</p>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
         </div>
     </section>
 
